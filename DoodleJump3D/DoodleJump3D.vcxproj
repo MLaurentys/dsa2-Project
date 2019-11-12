@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -12,8 +12,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B29A7F3F-25ED-41BB-93DB-A79A918FAFDC}</ProjectGuid>
-    <RootNamespace>C20_EntityManager</RootNamespace>
-    <ProjectName>C20_EntityManager</ProjectName>
+    <RootNamespace>DoodleJump3D</RootNamespace>
+    <ProjectName>DoodleJump3D</ProjectName>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -103,14 +103,6 @@ xcopy "$(SolutionDir)include\Simplex\Shaders" "$(SolutionDir)_Binary\Shaders" /y
     <ClCompile Include="..\include\imgui\imgui.cpp" />
     <ClCompile Include="..\include\imgui\imgui_demo.cpp" />
     <ClCompile Include="..\include\imgui\imgui_draw.cpp" />
-    <ClCompile Include="AppClass.cpp" />
-    <ClCompile Include="AppClassControls.cpp" />
-    <ClCompile Include="AppClassGUI.cpp" />
-    <ClCompile Include="AppClassMain.cpp" />
-    <ClCompile Include="ControllerConfiguration.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MyEntity.cpp" />
-    <ClCompile Include="MyEntityManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\imgui\imconfig.h" />
@@ -118,12 +110,6 @@ xcopy "$(SolutionDir)include\Simplex\Shaders" "$(SolutionDir)_Binary\Shaders" /y
     <ClInclude Include="..\include\imgui\ImGuiObject.h" />
     <ClInclude Include="..\include\imgui\imgui_internal.h" />
     <ClInclude Include="..\res\resource.h" />
-    <ClInclude Include="AppClass.h" />
-    <ClInclude Include="ControllerConfiguration.h" />
-    <ClInclude Include="Definitions.h" />
-    <ClInclude Include="Main.h" />
-    <ClInclude Include="MyEntity.h" />
-    <ClInclude Include="MyEntityManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\res\BTO.rc" />
