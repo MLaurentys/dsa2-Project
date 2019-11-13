@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{46BAC032-D294-4503-9F60-A9E6AB76BCE5}</ProjectGuid>
+    <ProjectGuid>{57EC9D45-1FD8-47BD-A6A8-A298BB9151FD}</ProjectGuid>
     <RootNamespace>DoodleJump3D</RootNamespace>
     <ProjectName>DoodleJump3D</ProjectName>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
@@ -103,15 +103,8 @@ xcopy "$(SolutionDir)include\Simplex\Shaders" "$(SolutionDir)_Binary\Shaders" /y
     <ClCompile Include="..\include\imgui\imgui.cpp" />
     <ClCompile Include="..\include\imgui\imgui_demo.cpp" />
     <ClCompile Include="..\include\imgui\imgui_draw.cpp" />
-    <ClCompile Include="AppClass.cpp" />
-    <ClCompile Include="AppClassControls.cpp" />
-    <ClCompile Include="AppClassGUI.cpp" />
-    <ClCompile Include="AppClassMain.cpp" />
-    <ClCompile Include="ControllerConfiguration.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MyEntity.cpp" />
-    <ClCompile Include="MyEntityManager.cpp" />
-    <ClCompile Include="MyMesh.cpp" />
+    <ClCompile Include="application.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\imgui\imconfig.h" />
@@ -119,13 +112,8 @@ xcopy "$(SolutionDir)include\Simplex\Shaders" "$(SolutionDir)_Binary\Shaders" /y
     <ClInclude Include="..\include\imgui\ImGuiObject.h" />
     <ClInclude Include="..\include\imgui\imgui_internal.h" />
     <ClInclude Include="..\res\resource.h" />
-    <ClInclude Include="AppClass.h" />
-    <ClInclude Include="ControllerConfiguration.h" />
-    <ClInclude Include="Definitions.h" />
-    <ClInclude Include="Main.h" />
-    <ClInclude Include="MyEntity.h" />
-    <ClInclude Include="MyEntityManager.h" />
-    <ClInclude Include="MyMesh.h" />
+    <ClInclude Include="application.h" />
+    <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\res\BTO.rc" />

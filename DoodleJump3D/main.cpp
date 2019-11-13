@@ -1,10 +1,12 @@
 // Include standard headers
-#include "main.h"
-using namespace Simplex;
+#include "Main.h"
 
-int main(void) {
-    Application* app = new Application("Doodle Jump", 400, 400);
-    app->Run();
-    delete app;
-    return 0;
+int main(void)
+{
+	using namespace Simplex;
+	Application* pApp = new Application();
+	pApp->Init("", RES_C_1280x720_16x9_HD, false, false);
+	pApp->Run();
+	SafeDelete(pApp);
+	return 0;
 }

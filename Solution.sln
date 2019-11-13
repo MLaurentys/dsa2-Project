@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BasicX", "BasicX\BasicX.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C20_EntityManager", "C20_EntityManager\C20_EntityManager.vcxproj", "{B29A7F3F-25ED-41BB-93DB-A79A918FAFDC}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CDoodleJump3D", "DoodleJump3D\DoodleJump3D.vcxproj", "{57EC9D45-1FD8-47BD-A6A8-A298BB9151FD}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DoodleJump3D", "DoodleJump3D\DoodleJump3D.vcxproj", "{46BAC032-D294-4503-9F60-A9E6AB76BCE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,12 +33,12 @@ Global
 		{B29A7F3F-25ED-41BB-93DB-A79A918FAFDC}.Release|x64.ActiveCfg = Release|Win32
 		{B29A7F3F-25ED-41BB-93DB-A79A918FAFDC}.Release|x86.ActiveCfg = Release|Win32
 		{B29A7F3F-25ED-41BB-93DB-A79A918FAFDC}.Release|x86.Build.0 = Release|Win32
-		{57EC9D45-1FD8-47BD-A6A8-A298BB9151FD}.Debug|x64.ActiveCfg = Debug|Win32
-		{57EC9D45-1FD8-47BD-A6A8-A298BB9151FD}.Debug|x86.ActiveCfg = Debug|Win32
-		{57EC9D45-1FD8-47BD-A6A8-A298BB9151FD}.Debug|x86.Build.0 = Debug|Win32
-		{57EC9D45-1FD8-47BD-A6A8-A298BB9151FD}.Release|x64.ActiveCfg = Release|Win32
-		{57EC9D45-1FD8-47BD-A6A8-A298BB9151FD}.Release|x86.ActiveCfg = Release|Win32
-		{57EC9D45-1FD8-47BD-A6A8-A298BB9151FD}.Release|x86.Build.0 = Release|Win32
+		{46BAC032-D294-4503-9F60-A9E6AB76BCE5}.Debug|x64.ActiveCfg = Debug|Win32
+		{46BAC032-D294-4503-9F60-A9E6AB76BCE5}.Debug|x86.ActiveCfg = Debug|Win32
+		{46BAC032-D294-4503-9F60-A9E6AB76BCE5}.Debug|x86.Build.0 = Debug|Win32
+		{46BAC032-D294-4503-9F60-A9E6AB76BCE5}.Release|x64.ActiveCfg = Release|Win32
+		{46BAC032-D294-4503-9F60-A9E6AB76BCE5}.Release|x86.ActiveCfg = Release|Win32
+		{46BAC032-D294-4503-9F60-A9E6AB76BCE5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
