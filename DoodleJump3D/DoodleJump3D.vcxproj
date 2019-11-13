@@ -46,9 +46,9 @@
     <OutDir>$(SolutionDir)Z_DELETE\</OutDir>
     <IntDir>$(SolutionDir)Z_DELETE\$(ProjectName)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)_d</TargetName>
-    <ExecutablePath>$(SolutionDir)include\GL\bin;$(SolutionDir)include\Simplex\bin;$(SolutionDir)include\SFML\bin;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath>$(SolutionDir)include\GL\bin;$(SolutionDir)include\Simplex\bin;$(SolutionDir)include\SFML\bin;$(SolutionDir)include\BasicX\bin;$(ExecutablePath)</ExecutablePath>
     <IncludePath>$(SolutionDir)include;$(SolutionDir)res;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)include\GL\lib;$(SolutionDir)include\Simplex\lib;$(SolutionDir)include\SFML\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)include\GL\lib;$(SolutionDir)include\Simplex\lib;$(SolutionDir)include\SFML\lib;$(SolutionDir)include\BasicX\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)Z_DELETE\</OutDir>
@@ -56,7 +56,7 @@
     <TargetName>$(ProjectName)</TargetName>
     <ExecutablePath>$(SolutionDir)include\GL\bin;$(SolutionDir)include\Simplex\bin;$(SolutionDir)include\SFML\bin;$(ExecutablePath)</ExecutablePath>
     <IncludePath>$(SolutionDir)include;$(SolutionDir)res;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)include\GL\lib;$(SolutionDir)include\Simplex\lib;$(SolutionDir)include\SFML\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)include\GL\lib;$(SolutionDir)include\Simplex\lib;$(SolutionDir)include\SFML\lib;$(SolutionDir)include\BasicX\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -68,7 +68,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glu32.lib;glew32.lib;opengl32.lib;simplex_d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glu32.lib;glew32.lib;opengl32.lib;basicx_d.lib;simplex_d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy "$(SolutionDir)include\Simplex\Shaders" "$(SolutionDir)_Binary\Shaders" /y</Command>
@@ -103,6 +103,7 @@ xcopy "$(SolutionDir)include\Simplex\Shaders" "$(SolutionDir)_Binary\Shaders" /y
     <ClCompile Include="..\include\imgui\imgui.cpp" />
     <ClCompile Include="..\include\imgui\imgui_demo.cpp" />
     <ClCompile Include="..\include\imgui\imgui_draw.cpp" />
+    <ClCompile Include="ApplicationManager.cpp" />
     <ClCompile Include="AppClass.cpp" />
     <ClCompile Include="AppClassControls.cpp" />
     <ClCompile Include="AppClassGUI.cpp" />
@@ -119,6 +120,7 @@ xcopy "$(SolutionDir)include\Simplex\Shaders" "$(SolutionDir)_Binary\Shaders" /y
     <ClInclude Include="..\include\imgui\ImGuiObject.h" />
     <ClInclude Include="..\include\imgui\imgui_internal.h" />
     <ClInclude Include="..\res\resource.h" />
+    <ClInclude Include="ApplicationManager.h" />
     <ClInclude Include="AppClass.h" />
     <ClInclude Include="ControllerConfiguration.h" />
     <ClInclude Include="Definitions.h" />

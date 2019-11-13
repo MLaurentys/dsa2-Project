@@ -60,6 +60,7 @@ private:
 
 public:
 #pragma region Constructor / Run / Destructor
+    GameState RunFrame();
 	/*
 	USAGE: Constructor
 	ARGUMENTS: ---

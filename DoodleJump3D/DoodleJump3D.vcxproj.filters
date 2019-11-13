@@ -37,6 +37,9 @@
     <ClCompile Include="MyMesh.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="ApplicationManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppClass.h">
@@ -73,6 +76,9 @@
       <Filter>resource</Filter>
     </ClInclude>
     <ClInclude Include="MyMesh.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationManager.h">
       <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>

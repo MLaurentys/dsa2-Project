@@ -465,3 +465,87 @@ void Application::WriteConfig(void)
 
 	fclose(pFile);
 }
+
+GameState Application::RunFrame() {
+    // handle events
+    GameState s = GameState::GAME;
+    sf::Event appEvent;
+    sf::Vector2i pos;
+    sf::Vector2u size;
+    while (m_pWindow->pollEvent(appEvent))
+    {
+        switch (appEvent.type)
+        {
+        case sf::Event::Closed:
+            // end the program
+            m_bRunning = false;
+            s = GameState::CLOSE;
+            break;
+        case sf::Event::Resized:
+            size = m_pWindow->getSize();
+            m_pSystem->SetWindowWidth(size.x);
+            m_pSystem->SetWindowHeight(size.y);
+            Reshape();
+            break;
+        case sf::Event::MouseMoved:
+            ProcessMouseMovement(appEvent);
+            pos = m_pWindow->getPosition();
+            size = m_pWindow->getSize();
+            m_pSystem->SetWindowX(pos.x);
+            m_pSystem->SetWindowY(pos.y);
+            m_pSystem->SetWindowWidth(size.x);
+            m_pSystem->SetWindowHeight(size.y);
+            break;
+        case sf::Event::MouseButtonPressed:
+            ProcessMousePressed(appEvent);
+            break;
+        case sf::Event::MouseButtonReleased:
+            ProcessMouseReleased(appEvent);
+            break;
+        case sf::Event::MouseWheelScrolled:
+            ProcessMouseScroll(appEvent);
+            break;
+        case sf::Event::KeyPressed:
+            if (appEvent.KeyPressed == sf::Keyboard::Key::F1)
+                s = GameState::PAUSE_MENU;
+            else if (appEvent.KeyPressed == sf::Keyboard::Key::F2)
+                s = GameState::END_MENU;
+            else
+                ProcessKeyPressed(appEvent);
+            break;
+        case sf::Event::KeyReleased:
+            ProcessKeyReleased(appEvent);
+            break;
+        case sf::Event::TextEntered:
+            if (appEvent.text.unicode > 0 && appEvent.text.unicode < 0x10000)
+                ImGui::GetIO().AddInputCharacter(appEvent.text.unicode);
+            break;
+        case sf::Event::JoystickButtonPressed:
+            ProcessJoystickPressed(appEvent);
+            break;
+        case sf::Event::JoystickButtonReleased:
+            ProcessJoystickReleased(appEvent);
+            break;
+        case sf::Event::JoystickMoved:
+            ProcessJoystickMoved(appEvent);
+            break;
+        case sf::Event::JoystickConnected:
+            ProcessJoystickConnected(appEvent.joystickConnect.joystickId);
+            break;
+        case sf::Event::JoystickDisconnected:
+            InitControllers();
+            break;
+        case sf::Event::GainedFocus:
+            m_bFocused = true;
+            break;
+        case sf::Event::LostFocus:
+            m_bFocused = false;
+            break;
+        }
+    }
+    ProcessKeyboard();//Continuous events
+    ProcessJoystick();//Continuous events
+    Update();
+    Display();
+    return s;
+}

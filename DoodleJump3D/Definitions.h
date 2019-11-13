@@ -14,6 +14,14 @@ Date: 2017/06
 #include "SFML\OpenGL.hpp"
 #include "SFML\Audio.hpp"
 
+enum class GameState {
+    MAIN_MENU,
+    GAME,
+    PAUSE_MENU,
+    END_MENU,
+    CLOSE
+};
+
 #endif //__DEFINITIONS_H_
 
 /*
